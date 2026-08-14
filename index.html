@@ -1,23 +1,1104 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "2026년 신형 및 중고 화물차 가격 비교 시스템",
+      "image": "https://images.pexels.com/photos/1108157/pexels-photo-1108157.jpeg",
+      "description": "2026년 최신 기준 현대 포터2, 기아 봉고3 등 1톤 화물차 가격부터 마이티, 파비스 등 중대형 화물차 가격 분석 및 리스, 장기렌트, 할부 조건별 예상 비용 정보를 총망라하여 제공합니다.",
+      "brand": {
+        "@type": "Brand",
+        "name": "현대, 기아, 타타대우, 볼보 종합 상용차"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "20080000",
+        "highPrice": "63610000",
+        "priceCurrency": "KRW",
+        "offerCount": "24"
+      }
+    }
+  </script>
+
+  <style>
+    html, body, div, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, table, thead, tbody, tr, th, td, form, label, input, select, textarea, button, section, nav, header, footer, main, dl, dt, dd, a, img {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #1d4ed8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: #ffffff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 4px solid #10b981;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #f8fafc;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #10b981;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .container {
+      display: flex;
+      gap: 2.5rem;
+      max-width: 1250px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .sidebar {
+      flex: 0 0 280px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+
+    .sidebar-widget {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8f0;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      border-left: 4px solid #10b981;
+      padding-left: 0.75rem;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+    }
+
+    .sidebar-menu li {
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar-menu a {
+      color: #475569;
+      font-size: 0.95rem;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .sidebar-menu a:hover {
+      color: #10b981;
+    }
+
+    .content-area {
+      flex: 1;
+      min-width: 0;
+    }
+
+    main {
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e2e8f0;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      color: #0f172a;
+      font-size: 1.8rem;
+      font-weight: 700;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      color: #1e1b4b;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      background-color: #f1f5f9;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    h4 {
+      color: #334155;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      text-align: justify;
+    }
+
+    strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-weight: 600;
+      padding: 1rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Calculator Styles */
+    .calculator-container {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2.5rem 0;
+    }
+
+    .calculator-container h3 {
+      background-color: transparent;
+      padding: 0;
+      margin-top: 0;
+      color: #166534;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .calc-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.25rem;
+    }
+
+    .calc-row label {
+      font-weight: 600;
+      color: #166534;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .calc-row select {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #bcdfc5;
+      background-color: #ffffff;
+      color: #1e293b;
+      font-size: 1rem;
+    }
+
+    .calc-btn {
+      background-color: #10b981;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.2s;
+    }
+
+    .calc-btn:hover {
+      background-color: #059669;
+    }
+
+    .calc-result-box {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #bbf7d0;
+    }
+
+    .result-title {
+      font-weight: 700;
+      color: #166534;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #f0fdf4;
+      padding-bottom: 0.5rem;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .highlight-text {
+      color: #10b981;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    .result-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Visual Graph Styles (CSS-based) */
+    .graph-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .graph-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0f172a;
+      margin-bottom: 1.25rem;
+    }
+
+    .graph-bar-group {
+      margin-bottom: 1rem;
+    }
+
+    .graph-label {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .graph-bar-wrapper {
+      background-color: #e2e8f0;
+      height: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .graph-bar {
+      height: 100%;
+      border-radius: 8px;
+      transition: width 1s ease-in-out;
+    }
+
+    .bar-lpg {
+      background-color: #3b82f6;
+      width: 48%;
+    }
+
+    .bar-ev {
+      background-color: #10b981;
+      width: 62%;
+    }
+
+    .bar-mighty {
+      background-color: #f59e0b;
+      width: 80%;
+    }
+
+    /* Tag Cloud */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .tag-item {
+      background-color: #f1f5f9;
+      color: #475569;
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* FAQ accordion */
+    .faq-accordion {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+    }
+
+    .faq-question {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0f172a;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 1rem 0;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Form design */
+    .consult-form {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #334155;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+      background-color: #ffffff;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    .submit-btn {
+      background-color: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #1e293b;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    footer p {
+      color: #94a3b8;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 968px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        position: static;
+        width: 100%;
+      }
+      main {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>2026 화물차 가격 및 구매 종합 금융 가이드</h1>
+      <p>현대 포터2, 기아 봉고3 등 1톤 상용차부터 중대형 특장차까지 전 트림의 실구매가, 지역별 전기 화물차 보조금, 최적의 금융 리스 장기렌트 상품 비교 분석 정보를 제공합니다.</p>
+      <nav>
+        <ul>
+          <li><a href="#시장흐름">시장 흐름 및 전망</a></li>
+          <li><a href="#지역모델연령">전국 시세 분석</a></li>
+          <li><a href="#가격계산기">실시간 가격 계산기</a></li>
+          <li><a href="#금융비교">리스 vs 할부 vs 렌트</a></li>
+          <li><a href="#구매꿀팁">전문가 구매 가이드</a></li>
+          <li><a href="#자주묻는질문">자주 묻는 질문</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">빠른 이동 메뉴</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#시장흐름">1. 2026년 화물차 시장 변화</a></li>
+          <li><a href="#지역모델연령">2. 전국 시세 및 연령별 매칭</a></li>
+          <li><a href="#가격계산기">3. 실시간 모의 견적 계산기</a></li>
+          <li><a href="#금융비교">4. 소유 및 금융 방식 비교</a></li>
+          <li><a href="#구매꿀팁">5. 허위매물 예방 및 실전 꿀팁</a></li>
+          <li><a href="#정부보조금">6. 2026년 정부 친환경 보조금</a></li>
+          <li><a href="#자주묻는질문">7. 핵심 질의응답 FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3 class="sidebar-title">실시간 시세 동향</h3>
+        <p style="font-size: 0.85rem; color: #64748b; line-height: 1.6; text-align: left;">
+          현재 디젤 트럭의 완전한 단종 이후 신규 모델인 LPG 터보 엔진과 전기차(EV) 라인업에 대한 수요가 점진적으로 증가하고 있습니다. 서울, 경기를 비롯한 수도권뿐만 아니라 지방 중심의 영세 사업자분들의 차량 교체 시기가 도래하며 금융 프로모션 경쟁이 뜨겁습니다.
+        </p>
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <main>
+        
+        <section id="시장흐름">
+          <h2>2026년 화물자동차 시장의 거대한 흐름과 패러다임의 변화</h2>
+          <p>
+            대한민국의 물류와 서민 경제를 지탱하는 <strong>화물차 가격</strong>은 자영업자와 중소 소상공인들에게 사업의 존속 여부를 결정지을 수 있는 핵심 요소 중 하나입니다. 과거 대한민국 상용차 시장을 호령했던 디젤 엔진 계열 화물차들이 대기환경개선촉진법 및 친환경 배출가스 등급 규제 강화로 인해 전면 생산 중단에 이르게 되었습니다. 이로 인해 2026년 현재 시장은 <strong>LPG 터보 엔진</strong>과 <strong>친환경 전기화물차(EV)</strong> 중심으로 완벽하게 재편되었습니다.
+          </p>
+          <p>
+            디젤 모델이 사라지면서 많은 소비자가 디젤 엔진의 장점인 고토크 성능을 잃지 않을까 우려했으나, 최근 출시되는 LPG 터보 엔진은 기존 디젤보다 뛰어난 정숙성과 최대 출력을 발휘하면서 우려를 잠재우고 있습니다. 하지만 차량 자체의 전자 장비 고급화 및 환경 정화 장치 탑재로 인해 출고 금액 자체가 전년 대비 상승세를 이어가고 있으며, 이에 따라 초기 구매 비용에 대한 사업주들의 예산 부담이 대폭 증가했습니다. 
+          </p>
+          <p>
+            따라서 구매 희망자는 무작정 신차 대리점으로 직행하기에 앞서, 자본 운용 상황에 부합하는 차량 확보 방식(할부 구매, 리스, 장기렌트)을 지혜롭게 설계해야 합니다. 각 제조 브랜드들이 선보인 신차 출고 이벤트 혜택, 금융 제휴 프로모션, 사은품 및 일시불 결제 시 주어지는 현금지원 여부를 꼼꼼하게 따지는 스마트 컨설팅 도입이 절실해진 시기입니다.
+          </p>
+
+          <div class="tag-cloud">
+            <span class="tag-item">포터2 가격</span>
+            <span class="tag-item">봉고3 2026 시세</span>
+            <span class="tag-item">1톤 영업용 번호판</span>
+            <span class="tag-item">화물차 장기렌터카</span>
+            <span class="tag-item">LPG 터보 트럭</span>
+            <span class="tag-item">전기화물차 정부보조금</span>
+            <span class="tag-item">화물차 계산기</span>
+            <span class="tag-item">초기비용 없는 리스</span>
+          </div>
+        </section>
+
+        <section id="지역모델연령">
+          <h2>전국 지역별, 모델별, 연령별 화물차 시세와 구매 매칭 분석</h2>
+          <p>
+            개인의 신용 점수, 거주하는 지자체, 그리고 종사하고자 하는 화물 업태에 따라 선택해야 하는 화물차 종류와 지불해야 하는 <strong>금액</strong>에는 중대한 편차가 생깁니다. 전국 주요 권역별 거래 데이터와 주 수요 연령층의 특징을 기반으로 입체적인 분석 시세를 도출했습니다.
+          </p>
+
+          <h3>지방자치단체 권역별 유통 시세 현황</h3>
+          <p>
+            먼저 <strong>서울 1톤 화물차 가격</strong>은 배송 목적의 수요가 초집중되어 있어 신차 출고 기간 단축을 위한 온라인 에이전시의 특판 리스 상품 계약이 유독 두드러집니다. 이어 거대한 물류 허브를 품고 있는 <strong>경기 1톤 포터2 시세</strong>의 경우, 장거리 이동과 도심형 근접 배송이 동시에 요구되므로 사후 관리가 확실하고 정비 인프라가 뛰어난 브랜드 차량 선호가 뚜렷합니다. 
+          </p>
+          <p>
+            공항철도 및 대형 항만을 접한 <strong>인천 봉고3 하이냉동탑차 가격</strong>은 콜드체인 수송용의 특수 장비를 후면에 기본 탑재하여 평균 2,000만원대 후반부터 3,000만원대 중반까지 넓은 폭의 요금으로 공급되고 있습니다. 남해 물류망의 중심 축을 담당하는 <strong>부산 중형 화물차 가격비교</strong> 결과를 보면 2.5톤에서 5톤에 달하는 준중형 트럭의 계약 점유율이 여타 도시에 비해 상당히 높습니다.
+          </p>
+          <p>
+            농축산물 도매시장 거래가 주를 이루는 영남의 중심 <strong>대구 현대 마이티 가격</strong>은 적재형 카고 기준으로 차량 상태에 따라 5,000만원대 중반을 마크하고 있습니다. 내륙 철도 및 도로 교통망의 핵심 요지인 <strong>대전 타타대우 더쎈 견적</strong> 역시 7000만원 전후 수준에서 활발하게 입찰 및 상담 신청이 발생하고 있습니다. 호남 지역의 수송 거점인 <strong>광주 3.5톤 화물차 가격</strong>은 대단위 물류창고 납품용 윙바디 모델 위주로 계약되어 특장 개조 비용 포함 시 8,000만원 선에 육박하기도 합니다.
+          </p>
+          <p>
+            중화학 공업 단지가 거대하게 펼쳐진 <strong>울산 현대 파비스 비용</strong>은 원자재 수송용 대형 프레임 개조 수요가 많아 일대일 커스텀 금융 컨설팅을 통한 고액 대출 및 저금리 리스 설계 비중이 지배적입니다. 최근 스마트 시티 인프라가 자리를 잡은 <strong>세종 친환경 화물 전기차 보조금</strong> 혜택과 천혜의 섬 지리 특성을 지닌 <strong>제주 전기 화물차 보조금 혜택</strong>은 각각 1톤 기준 국가 보조금과 지자체 매칭 지원금을 도합하여 약 1,300만원에서 1,800만원 수준의 감면 효과를 얻을 수 있습니다.
+          </p>
+          <p>
+            강추위와 험준한 산악 고갯길이 산재한 <strong>강원 4륜구동 화물차 가격</strong>은 험로 돌파 및 차체 전복을 막아줄 4WD 시스템을 추가 적용하는 요금제 비율이 전체의 70%를 상회합니다. 더불어 삼남 지방의 교통 가교 역할을 맡는 <strong>충북 봉고3 특장차 가격</strong>, 건설 노동자 이송용으로 넓은 탑승 공간을 제공해 활용성이 높은 <strong>충남 포터 더블캡 가격</strong>, 그리고 <strong>전북 중고 화물차 가격</strong> 평균은 약 1,500만원 선에서 컨디션 좋은 차량 공급이 이루어지고 있습니다. 
+          </p>
+          <p>
+            생선 및 신선 어패류 물량이 주를 이루는 호남 남단의 <strong>전남 1.2톤 화물차 비용</strong>은 일반 1톤 대비 더 넓은 적재량이 보장되어 만족도가 매우 높게 도출됩니다. 산지와 평야의 굴곡을 달리는 <strong>경북 과수원용 소형 트럭 가격</strong>은 전고가 낮은 로우형 특수 적재 모델이 활약 중입니다. 그 외 동남권 기저 공업 중심 도시의 수송 수요를 대변하는 <strong>경남 용달화물 창업 비용</strong> 계산 사례는 영업용 번호판 권리금과 맞물려 초기 예산 수립 단계부터 고도의 정밀성이 요구됩니다.
+          </p>
+
+          <h3>나이 및 세대 연령대별 주력 선호 차종 및 구매 특성</h3>
+          <p>
+            새로운 경제 활동 인구의 세대교체와 은퇴 후 노후 대책 마련 흐름에 따라 연령별 선호 유형 또한 매우 뚜렷하게 나뉩니다.
+          </p>
+          <p>
+            운송 서비스 및 커머스 배달 산업에 진취적으로 참여하는 <strong>20대 화물차 추천 모델</strong>은 초기 지출금이 없는 조건의 무보증 스마트 다이렉트 렌트 상품이나 중고 매입 상품이 인기를 끕니다. 신용 등급을 영리하게 관리하며 회계 손비 처리 및 부가세 환급 혜택을 놓치지 않으려는 <strong>30대 포터2 리스 견적</strong>은 잔존가치를 영리하게 설정하여 매달 불입하는 금액을 최소화하는 최적의 합리성을 지향합니다.
+          </p>
+          <p>
+            안정적인 직장 생활 은퇴 후 또는 업종 전환을 꿈꾸는 <strong>40대 개별용달 창업 비용</strong> 구성은 차량 신차 가격뿐 아니라 화물 배송을 위해 반드시 필요한 영업용 노란 번호판 프리미엄 시세까지 함께 예산 편성에 넣어야 하므로, 일시 불입금 비중이 타 연령층 대비 높습니다. 
+          </p>
+          <p>
+            더욱 강력한 연령층인 <strong>50대 지입차 시세 분석</strong>의 경우에는 주선면허와 영업용 임대 넘버를 정교하게 비교 분석해야 하며, 법인과의 위수탁 계약 조건에 부합하는 차량을 안전하고 장기적인 파트너십으로 설계할 전문 파트너 컨설턴트와의 매칭이 성패를 좌우합니다. 
+          </p>
+          <p>
+            마지막으로 실버 일자리로서 개인 소형 운송에 도전하는 <strong>60대 은퇴 후 소형 화물차 운송</strong> 시장의 주체자분들은 무엇보다 사고 발생 시 운전자의 인명 손실을 최소화할 최신 지능형 안전 보조 시스템 장착 트림을 절대적으로 신용하는 성향을 띠며, 복잡한 신차 출고 과정을 대행해 주는 원스톱 성지 업체의 다이렉트 컨설팅을 깊이 선호합니다.
+          </p>
+        </section>
+
+        <section id="가격계산기">
+          <h2>2026 화물차 월 납입금 실시간 모의 계산기</h2>
+          <p>
+            선호하는 신차 모델과 원하시는 금융 이용 방식, 선납 및 계약 조건을 투입하여 대략적인 월 평균 납입액을 즉석에서 시뮬레이션해 보세요.
+          </p>
+
+          <div class="calculator-container">
+            <h3>실시간 자산관리 화물차 시뮬레이터</h3>
+            <p style="color: #166534; font-size: 0.9rem; margin-bottom: 1.5rem;">
+              인터넷이나 스마트폰 앱, 어플 등을 검색하는 수고를 덜어드리기 위해, 제조사 공시 요금 기준표를 매칭하여 최적의 월 예산 계산을 도와드립니다.
+            </p>
+            
+            <div class="calc-row">
+              <label for="calc-model">희망하는 화물차 대표 라인업</label>
+              <select id="calc-model">
+                <option value="porter-lpg">현대 포터2 1톤 LPG 초장축 슈퍼캡 (2,058만원)</option>
+                <option value="porter-ev">현대 포터2 1톤 전기 EV (지자체 평균 실구매 2,600만원)</option>
+                <option value="bongo-lpg">기아 봉고3 1톤 LPG 킹캡 L라이트 (2,008만원)</option>
+                <option value="bongo-ev">기아 봉고3 1톤 EV 스마트 하이탑 (실구매 2,550만원)</option>
+                <option value="mighty-25">현대 마이티 2.5톤 카고 신차 (5,500만원)</option>
+                <option value="pavise-55">현대 파비스 5.5톤 카고 프리미엄 (8,500만원)</option>
+              </select>
+            </div>
+
+            <div class="calc-row">
+              <label for="calc-method">구매 및 금융 상품 계약 종류</label>
+              <select id="calc-method">
+                <option value="lease">화물차 다이렉트 운용 리스 (정비 비포함, 비용처리 유리)</option>
+                <option value="rent">장기 렌터카 (영업용 전용 단체 종합보험 및 정비 패키지)</option>
+                <option value="installment">정식 캐피탈 우대 금리 할부구매</option>
+              </select>
+            </div>
+
+            <div class="calc-row">
+              <label for="calc-period">계약 적용 기간 (할부/리스 개월 수)</label>
+              <select id="calc-period">
+                <option value="36">36개월</option>
+                <option value="48">48개월</option>
+                <option value="60">60개월</option>
+              </select>
+            </div>
+
+            <div class="calc-row">
+              <label for="calc-deposit">초기 자금 선납금 / 보증금 설정비율</label>
+              <select id="calc-deposit">
+                <option value="0">무보증 0% 조건 (신용평가 충족 시 가능)</option>
+                <option value="10">10% 선납금 선지불</option>
+                <option value="20">20% 보증금 예치</option>
+                <option value="30">30% 초기 최적화 금리형 예치</option>
+              </select>
+            </div>
+
+            <button type="button" class="calc-btn" onclick="runCalculation()">월 예상 실비용 계산하기</button>
+
+            <div id="calc-result" class="calc-result-box" style="display: none;">
+              <p class="result-title">모의 계산기 종합 판정 결과</p>
+              <div class="result-row">
+                <span>차량 총 구입 원가</span>
+                <strong id="res-base">0원</strong>
+              </div>
+              <div class="result-row">
+                <span>계약 시 지불 선납금</span>
+                <strong id="res-deposit">0원</strong>
+              </div>
+              <div class="result-row">
+                <span>월 납입 예상 비용</span>
+                <strong id="res-monthly" class="highlight-text">0원 / 월</strong>
+              </div>
+              <p class="result-desc">
+                해당 결과는 공식 차량 출고가에 금융 평균 우대 금리를 대입하여 도출한 예상 시뮬레이션입니다. 각 이용 제휴사 고객센터를 통한 정식 신용 평가 심사 결과에 따라 실제 지불 금액과 지원금 혜택은 미세한 차이점이 존재할 수 있으니 참고용 자료로 활용해 주시기 바랍니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="금융비교">
+          <h2>화물차 구매 금융 방식의 다각도 비교 분석: 할부 vs 리스 vs 장기렌트</h2>
+          <p>
+            개인 사업자나 신규 법인을 설립하여 사업에 나서는 경우 화물차량을 구매하는 경로에 대해 엄청난 갈등을 겪게 마련입니다. 대표적인 세 가지 유형인 할부, 리스, 장기렌터카 제도의 핵심 차이점과 세금 절감 메커니즘을 아래의 일목요연한 정밀 데이터 테이블을 통해 면밀히 확인해 보십시오.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>분석 항목</th>
+                  <th>신차 할부 구매</th>
+                  <th>다이렉트 화물 리스</th>
+                  <th>신차 장기렌터카</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>소유 명의</strong></td>
+                  <td>개인 또는 법인 자산 등록</td>
+                  <td>리스 금융사 소유</td>
+                  <td>렌터카 전문 제휴사 소유</td>
+                </tr>
+                <tr>
+                  <td><strong>신용도 및 부채 인식</strong></td>
+                  <td>전액 대출 부채로 잡힘 (부채비율 상승)</td>
+                  <td>금융 리스 부채 반영 (상품 조건별 상이)</td>
+                  <td>자산/부채 미반영 (단순 임대차 형태)</td>
+                </tr>
+                <tr>
+                  <td><strong>부가세 환급 혜택</strong></td>
+                  <td>업무용 화물차 환급 가능</td>
+                  <td>이용자 명의리스 시 전액 환급 가능</td>
+                  <td>렌터카 세금계산서 발행 시 환급 불가</td>
+                </tr>
+                <tr>
+                  <td><strong>적용 번호판 종류</strong></td>
+                  <td>일반 자가용 번호판 (영업용 번호판 이전 가능)</td>
+                  <td>일반 자가용 번호판 동일 적용</td>
+                  <td>렌터카 전용 번호판 (하, 허, 호 강제 부여)</td>
+                </tr>
+                <tr>
+                  <td><strong>자동차 종합 보험</strong></td>
+                  <td>개인 가입 (무사고 경력 누적 및 할인 혜택 유지)</td>
+                  <td>개인 가입 (무사고 시 연간 요금 인하)</td>
+                  <td>렌트사 일괄 단체 가입 (사고 시 면책금만 납부)</td>
+                </tr>
+                <tr>
+                  <td><strong>중도 해지 시 단점</strong></td>
+                  <td>중도상환수수료 발생 (약 1% ~ 2%)</td>
+                  <td>중도 해약금 위약금 발생 가능</td>
+                  <td>중도 해지 위약금 요율 상대적으로 높음</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            과거에는 단순히 대면 오프라인 자동차 딜러의 권유에만 의존하여 금리가 비싼 할부 상품에 덜컥 가입하는 사례가 대부분이었습니다. 하지만 최근에는 스마트폰과 인터넷 발달 덕분에 다양한 가격비교 사이트나 공식 가입 좌표, 성지 카페 등지에서 각 캐피탈사의 최저 마진 금리를 사전에 직접 수집하는 지혜로운 이들이 늘어났습니다. 
+          </p>
+          <p>
+            특히 화물차 리스의 가장 강력한 <strong>장점</strong> 중 하나는 리스료 지불 비용을 전액 법인세 및 종합소득세의 필요 경비로 계상할 수 있어 뛰어난 합리적 절세가 보장된다는 부분입니다. 반면 장기렌터카의 경우 번호판이 렌터카 전용 번호판으로 출고되어 영업용 화물 용달 번호판으로 개조 및 등록하는 것이 불가능하다는 구조적 <strong>단점</strong>이 존재하므로, 자신의 주 목적이 개별 용달 배달 대행업인지, 순수 업무 지원용 내부 카고 운영인지를 분별하여 똑똑하게 판단해야 합니다.
+          </p>
+
+          <div class="graph-container">
+            <p class="graph-title">이용 형태별 월 실질 부담 비용 시각적 비율 분석 (LPG 초장축 48개월 기준)</p>
+            
+            <div class="graph-bar-group">
+              <div class="graph-label">
+                <span>일반 할부구매 (보험료, 자동차세, 세금 개별 계산 시)</span>
+                <strong>높은 연간 세액 부담 및 원금</strong>
+              </div>
+              <div class="graph-bar-wrapper">
+                <div class="graph-bar bar-mighty"></div>
+              </div>
+            </div>
+
+            <div class="graph-bar-group">
+              <div class="graph-label">
+                <span>일물일권 화물차 운용 리스 (부가세 전액 환급 및 비용처리 극대화)</span>
+                <strong>세제 혜택 반영 실 지출 절감</strong>
+              </div>
+              <div class="graph-bar-wrapper">
+                <div class="graph-bar bar-ev"></div>
+              </div>
+            </div>
+
+            <div class="graph-bar-group">
+              <div class="graph-label">
+                <span>일반 단기 렌탈 / 리스 무보증 초기형</span>
+                <strong>중간대 부담 요율</strong>
+              </div>
+              <div class="graph-bar-wrapper">
+                <div class="graph-bar bar-lpg"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="구매꿀팁">
+          <h2>전문가들이 귀띔하는 허위매물/사기 피해 예방 및 중고 화물차 필수 체크리스트</h2>
+          <p>
+            화물 운송 및 유통 업종에 첫발을 딛는 초보 개인 사업자분들이 주로 이용하는 주요 온라인 자동차 커뮤니티인 <strong>보배드림</strong>, <strong>디시</strong> 자동차 갤러리, <strong>펨코</strong> 및 <strong>에펨코리아</strong> 등 상용차 관련 소통 채널에는 화물차 구매 과정에서 당한 수많은 조작 사기 피해와 잘못된 위수탁 지입 사기 후기글이 무수하게 게시되어 있습니다. 이러한 불상사를 사전에 완전 무결하게 방지하기 위해, 중고 화물차를 알아볼 때 한 치의 오차 없이 검토해야 할 리스트를 전수 공유합니다.
+          </p>
+
+          <h4>1. 과적 차량 여부를 판단하는 물리적 노하우</h4>
+          <p>
+            중고 화물 트럭 시장에서 주행 거리 조작이나 단순 사고 교환 이력보다 훨씬 위험한 요인은 바로 과도한 무게를 버틴 과적 이력입니다. 적재함 하부 프레임이 눈에 띄게 휘었거나, 후륜 현가장치에 장착된 판스프링이 과도하게 덧대어 보강되어 있는 차량은 차량 전체 뼈대에 누적 피로가 심각한 수준에 이르렀다는 증거입니다. 이러한 상태의 차량은 당장 차량 가격이 시세보다 싼곳이라 하더라도 구매 후 얼마 지나지 않아 막대한 프레임 균열이나 정비 수리 비용을 유발해 결국 가계 경제를 망가뜨리게 됩니다.
+          </p>
+
+          <h4>2. LPG 터보와 친환경 EV 차종의 일 장 일 단 명쾌한 차이점</h4>
+          <p>
+            친환경 고출력 LPG 터보 신차 모델은 가스 완충 시 약 400킬로미터 이상의 넉넉한 항속 거리를 제공하고, 인근 충전소가 도처에 널려 있어 주유 편의성이 발군인 <strong>장점</strong>이 존재합니다. 하지만 LPG 충전 비용 자체의 유가 변동성에 노출된다는 단점 또한 명확합니다. 
+          </p>
+          <p>
+            반면 화물 전기차(EV) 모델은 매달 소모되는 유류비 부담이 매우 극적으로 저감되고 전기차 요금제 충전 단가 혜택도 존재하지만, 매서운 추위가 몰아치는 동절기 겨울철에는 주행 가능 거리가 가혹하게 하락하며, 충전기가 만석이거나 장거리 운송 시 장시간 정체 충전을 겪어야 해, 시간 자체가 곧 매출과 직결되는 화물 배송 기사님들에게 크나큰 타격을 입힐 수 있습니다.
+          </p>
+
+          <h4>3. 디지털 정보 습득 플랫폼의 스마트한 전방위 활용법</h4>
+          <p>
+            더 이상 발품만 파는 고전적 구매 관행에만 얽매이지 마십시오. 최근에는 신차 및 중고 매물 시세를 실시간 모니터링하기 위해 <strong>네이버</strong> 공식 딜러 카페나 <strong>구글</strong> 크롬 브라우저를 기반으로 한 고품격 가격 검색 기능을 애용합니다. 나아가 상용차 유지 관리 전문 채널이 대거 포진한 <strong>유튜브</strong>나 최신 소식이 빠른 <strong>트위터</strong>, 실제 출고 모습을 다채롭게 뽐내는 <strong>인스타그램</strong>, 그리고 물류망 연합 커뮤니티가 즐비한 <strong>페이스북</strong> 그룹을 입체적으로 가입하여 눈동냥을 넓히시는 것을 추천합니다. 
+          </p>
+          <p>
+            또한, 카카오톡 오픈채팅방이나 업계 주요 소식이 수시로 오고 가는 텔레그램 속보 채널을 정보 습득 좌표로 활용할 수 있으며, 일상의 대표 자산관리 서비스인 <strong>토스</strong>를 설치하여 정기 자동차세 자동 세액 계산과 세제 납부를 이행하는 것이 현명한 자산 관리의 지름길입니다. 필요할 때에는 <strong>제미나이</strong>나 <strong>챗지피티</strong>와 같은 고지능 <strong>AI</strong> 엔진에 화물차 운용 예상 손익분기점을 시물레이션해달라고 정교하게 질문해 보세요. 순식간에 체계적인 리포트를 손에 쥘 수 있어 소규모 자영업자들의 사업 나침반 역할을 든든히 해 줍니다.
+          </p>
+        </section>
+
+        <section id="정부보조금">
+          <h2>2026년 기준 전국 화물차 차종별 신차 공식 가격표 정보 및 정부 친환경 보조금 현황</h2>
+          <p>
+            현재 각 주요 상용 브랜드에서 활발히 출시하여 자영업자들의 발이 되어주는 주요 기종별 공식 가격 정보를 요약해 드립니다.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>세부 세그먼트</th>
+                  <th>제조 브랜드 및 차량 기종</th>
+                  <th>공식 출시 가격대 범위</th>
+                  <th>정부 보조금 및 기타 지원금</th>
+                  <th>주요 강점 및 기능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>소형 1톤 카고 트럭</td>
+                  <td>현대자동차 포터2 LPG 터보</td>
+                  <td>2,058만원 ~ 2,560만원</td>
+                  <td>노후 경유차 조기 폐차 시 추가 혜택 가능</td>
+                  <td>우수한 기동성, 부품 수급 용이성 압도적</td>
+                </tr>
+                <tr>
+                  <td>소형 1톤 카고 트럭</td>
+                  <td>기아 봉고3 LPG 터보 2WD</td>
+                  <td>2,008만원 ~ 2,490만원</td>
+                  <td>LPG 화물 전환 특별 세제 혜택</td>
+                  <td>단단한 판스프링 하체 세팅, 내구성</td>
+                </tr>
+                <tr>
+                  <td>친환경 소형 전기트럭</td>
+                  <td>현대 포터2 일렉트릭 EV</td>
+                  <td>실구매가 약 2,600만원 선</td>
+                  <td>지자체 매칭 보조금 최대 1,800만원</td>
+                  <td>저소음, 무진동, 시내 도심 배송에 적화</td>
+                </tr>
+                <tr>
+                  <td>준중형 2.5톤 ~ 3.5톤</td>
+                  <td>현대자동차 마이티 카고</td>
+                  <td>5,300만원 ~ 6,500만원</td>
+                  <td>특수 용달 상용 융자 대출 할인 제도</td>
+                  <td>중대형 물류 핵심 가교, 내구프레임 강건</td>
+                </tr>
+                <tr>
+                  <td>준중형 2.5톤 ~ 3.5톤</td>
+                  <td>타타대우자동차 더쎈 카고</td>
+                  <td>5,400만원 ~ 6,600만원</td>
+                  <td>제조사 자체 저금리 스마트 할부 지원</td>
+                  <td>풀 에어 브레이크 장착으로 압도적 제동력</td>
+                </tr>
+                <tr>
+                  <td>대형 5.5톤 ~ 25톤</td>
+                  <td>현대 파비스 / 엑시언트 프로</td>
+                  <td>8,500만원 ~ 2억 4,000만원대</td>
+                  <td>상용 화물차 특수 유가보조금 환급 대상</td>
+                  <td>전국 고속 물류 종단 핵심, 수입차 필적 사양</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            본 가격표의 금액은 순수 기본 신차 출고가를 명시한 것이며, 특수 목적용 윙바디 박스 탑승 구조, 든든한 상하강 유압 리프트를 연계한 파워게이트 개조, 혹은 냉동기 일체화 설비를 갖추는 과정에서 추가 가공 금액이 합산될 수 있습니다. 
+          </p>
+          <p>
+            또한 각 지역의 친환경 에코 드라이빙 활성화 기조 정책에 따라 세종시 및 제주도 등 지자체별로 지원하는 세부 친환경 전기 트럭 보조금 예산 배정 현황은 시기별로 선착순 마감 처리되므로, 본인의 실 거주 등록 지자체 교통 환경과 소속 대리점 딜러를 통해 소진 전 즉각 신청서를 제출하는 한 박자 빠른 주도성이 강하게 요구됩니다.
+          </p>
+        </section>
+
+        <section id="자주묻는질문">
+          <h2>자주 묻는 질문 (FAQ) - 예비 화물 사업자의 모든 의문 해결</h2>
+          <p>
+            화물 운송 자격 면허의 취득 과정이나 개인 사업자등록증 개시 시점 등 실무 행정 과정에서 다수의 소비자가 고민하시는 의문을 일목요연하게 풀어 드립니다.
+          </p>
+
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <div class="faq-question">
+                Q1. 화물 신규 면허 보유자나 초기 신규 창업 법인도 무보증 리스 승인이 실제로 가능한가요?
+              </div>
+              <div class="faq-answer">
+                네, 원칙적으로 신설 법인이나 매출이 아직 확인되지 않는 신규 사업자는 심사가 다소 정밀하게 이루어지지만, 대표자 개인의 신용 수준이 준수하고 연체 이력이 전무하다면 보증보험사 발행 보증서로 대체하거나 다수의 리스 취급 금융 제휴사 금리 비교 심사를 거쳐 초기 부담금 0원 수준의 무보증 리스 계약을 충분히 완수할 수 있습니다. 당사의 정밀 금융 매칭 컨설팅 서비스를 이용해 승인 가능 여부를 진단받아보시기 바랍니다.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Q2. 영업용 화물용 노란 번호판과 흰색 자가용 번호판의 실질적인 용도 및 권리금 시세 차이는 무엇입니까?
+              </div>
+              <div class="faq-answer">
+                일반 순수 흰색 번호판 차량은 자신의 소유 물건이나 자사 내부 물류 수송 업무에만 국한하여 활용할 수 있으며, 타인에게 유료로 대가를 이체받는 유상 운송 행위가 법률적으로 엄격히 제한됩니다. 만약 자가용 번호판으로 돈을 받고 배송을 할 경우 막대한 형사 처벌과 벌금이 부과됩니다. 합법적인 영업 활동을 위해서는 매달 일정 요금세를 지불하고 임대하여 이용하는 개별 화물 운송 넘버를 구하거나, 일시금으로 넘버 권리금을 지불하는 영구 소유 형태의 노란 영업용 번호판을 매입해야 하며, 해당 프리미엄 권리 시세는 현재 기준 약 2,600만원에서 3,000만원 대 초반 안팎에서 유동적으로 등락을 거듭하고 있습니다.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Q3. 영업용 화물차의 전용 종합자동차보험 가입 시 고려할 점과 소득세 절세 방법은 어떻게 됩니까?
+              </div>
+              <div class="faq-answer">
+                영업용 화물 차량은 운행량이 엄청나고 사고 위험 노출 빈도가 높기 때문에, 일반 승용형 다이렉트 보험 대비 보험 금액이 상대적으로 매우 높게 형성됩니다. 이에 대비하여 화물 상용 운전자 배상 책임 특약을 꼼꼼하게 담보로 설계해 가입하셔야 불의의 도로 낙하물 혹은 대형 파손 사고 시 재정적 파산을 막아낼 수 있습니다. 또한 세금 절감 부문에서는, 부가세 확정 신고 시 화물 자동차 구입 전액에 대한 매입 세액 공제를 환급금 수령 방식으로 충족하고 매월 납부하시는 캐피탈 리스료 전액을 소득공제 경비로 귀속시켜 실제 연간 소득세 구간 세율을 낮추는 똑똑한 절세 처리를 실행해야만 합니다.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="맞춤상담">
+          <h2>화물차 최적 금융 견적 및 비즈니스 1:1 맞춤형 컨설팅 신청</h2>
+          <p>
+            개개인의 구체적인 창업 조건, 원하는 화물 업종, 현재 가용 초기 현금 비율과 신용 가치에 따라 제일 적절한 화물차 공급 조건은 개별적으로 완벽하게 다른 양상을 띠게 마련입니다.
+          </p>
+          <p>
+            아래에 필요한 정보를 소상히 채우고 가입 신청해 주시면, 전국의 캐피탈 및 브랜드별 우대 혜택을 전수 취합하여 가장 저렴한곳의 최저가 할인 포트폴리오를 제공해 드리겠습니다. 풍성한 주유 모바일 상품권 및 고급 블랙박스 연계 사은품 증정 특별 이벤트 기간을 절대로 놓치지 마십시오.
+          </p>
+
+          <div class="consult-form">
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('상담 신청이 완료되었습니다. 담당 전문 에이전트가 24시간 내에 기재하신 전화번호로 신속하고 정직하게 무료 상담 전화를 드립니다.');">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="usr-name">신청인 대표자 존함</label>
+                  <input type="text" id="usr-name" required placeholder="예: 홍길동">
+                </div>
+                <div class="form-group">
+                  <label for="usr-phone">연락 받으실 연락처</label>
+                  <input type="tel" id="usr-phone" required placeholder="예: 010-1234-5678">
+                </div>
+                <div class="form-group">
+                  <label for="usr-region">활동 예정 주 권역</label>
+                  <select id="usr-region">
+                    <option value="seoul">서울특별시</option>
+                    <option value="gyeonggi">경기도</option>
+                    <option value="incheon">인천광역시</option>
+                    <option value="busan">부산광역시</option>
+                    <option value="daegu">대구광역시</option>
+                    <option value="daejeon">대전광역시</option>
+                    <option value="gwangju">광주광역시</option>
+                    <option value="ulsan">울산광역시</option>
+                    <option value="sejong">세종특별자치시</option>
+                    <option value="gangwon">강원도</option>
+                    <option value="jeju">제주특별자치도</option>
+                    <option value="etc">기타 지방 권역</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="usr-model">희망하는 차종 등급</label>
+                  <select id="usr-model">
+                    <option value="1">현대 포터2 1톤 카고</option>
+                    <option value="2">기아 봉고3 1톤 카고</option>
+                    <option value="3">친환경 소형 전기트럭</option>
+                    <option value="4">특장 탑차 / 냉동탑차</option>
+                    <option value="5">중대형 화물트럭 (마이티 / 파비스)</option>
+                    <option value="6">윙바디 / 파워게이트 특장</option>
+                  </select>
+                </div>
+                <div class="form-group form-full">
+                  <label for="usr-memo">추가적인 상세 질문 기재 (희망 보증금 요율, 사은품 여부, 무보증 진행 여부 등)</label>
+                  <textarea id="usr-memo" rows="4" placeholder="사업 목적과 가용 가능한 자산 규모를 소상히 적어주시면 훨씬 정교한 금융 설계서를 제공해 드리는데 많은 도움이 됩니다."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">최저가 보장 1:1 화물차 종합 금융 상담 신청</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="외부출처">
+          <h2>국내외 신뢰할 수 있는 공식 상용 자동차 정보망 및 지식 아카이브</h2>
+          <p>
+            화물 운송과 관련 법령, 세법에 대해 더욱 공인되고 명백히 증명된 상용차 시세를 추가로 확인하고 싶으신 분은 아래의 신용도 높은 공식 사이트를 방문해 자료를 상시 습득해 보실 것을 적극 권고해 드립니다.
+          </p>
+          <ul style="list-style: none; padding-left: 0.5rem; line-height: 2;">
+            <li style="margin-bottom: 0.75rem;">
+              <a href="https://directscheckj.koreahankang.com" target="_blank" rel="noopener">
+                1. 전국 화물 상용차 종합 금융 정보 통합 분석 포털 (reliabledone.com)
+              </a>
+              <span style="display: block; font-size: 0.85rem; color: #64748b; padding-left: 1.2rem;">
+                대한민국 전국 상용 화물 기종의 정밀 금융 리스 조건 및 지자체 매칭 지원금 실태를 세부적으로 연구하고 분석하는 전문 분석 센터입니다.
+              </span>
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <a href="https://namu.wiki/w/%ED%99%94%EB%AC%BC%EC%9E%90%EB%8F%99%EC%B0%A8" target="_blank" rel="noopener">
+                2. 나무위키 – 대한민국 화물자동차 산업의 상세 지식백과사전
+              </a>
+              <span style="display: block; font-size: 0.85rem; color: #64748b; padding-left: 1.2rem;">
+                국산 소형 Porter 시리즈와 Bongo 패밀리의 역사부터 현대 상용차 모델들의 특징 및 배기가스 등급 변화 연표를 풍부하게 보실 수 있습니다.
+              </span>
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <a href="https://www.car365.go.kr" target="_blank" rel="noopener">
+                3. 국토교통부 자동차365 – 공공 정부 차량 통합 안전망 서비스
+              </a>
+              <span style="display: block; font-size: 0.85rem; color: #64748b; padding-left: 1.2rem;">
+                구매하고자 하는 중고 화물 트럭의 실제 자동차 등록 번호 분석, 체납 압류 내역, 침수 차량 폐차 여부를 대조해 볼 수 있는 공신력 넘치는 국가 기관 포털입니다.
+              </span>
+            </li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  
+  <script>
+    function runCalculation() {
+      const model = document.getElementById('calc-model').value;
+      const method = document.getElementById('calc-method').value;
+      const period = parseInt(document.getElementById('calc-period').value);
+      const depositPercent = parseInt(document.getElementById('calc-deposit').value);
+
+      let carPrice = 20580000;
+      if (model === 'porter-lpg') carPrice = 20580000;
+      else if (model === 'porter-ev') carPrice = 26000000;
+      else if (model === 'bongo-lpg') carPrice = 20080000;
+      else if (model === 'bongo-ev') carPrice = 25500000;
+      else if (model === 'mighty-25') carPrice = 55000000;
+      else if (model === 'pavise-55') carPrice = 85000000;
+
+      const depositAmt = carPrice * (depositPercent / 100);
+      const remainingAmt = carPrice - depositAmt;
+
+      let interestRate = 0.055; 
+      if (method === 'lease') interestRate = 0.048; 
+      else if (method === 'rent') interestRate = 0.052;
+
+      const totalWithInterest = remainingAmt * (1 + interestRate * (period / 12));
+      let monthlyBase = totalWithInterest / period;
+
+      if (method === 'lease' || method === 'rent') {
+        const residualVal = carPrice * 0.35;
+        const fundedAmt = remainingAmt - residualVal;
+        const monthlyInterest = (remainingAmt + residualVal) / 2 * interestRate / 12;
+        const monthlyPrincipal = fundedAmt / period;
+        monthlyBase = monthlyPrincipal + monthlyInterest;
+      }
+
+      document.getElementById('res-base').innerText = carPrice.toLocaleString() + ' 원';
+      document.getElementById('res-deposit').innerText = depositAmt.toLocaleString() + ' 원';
+      document.getElementById('res-monthly').innerText = Math.round(monthlyBase).toLocaleString() + ' 원';
+      document.getElementById('calc-result').style.display = 'block';
+    }
+
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-question').forEach((question) => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+  
